@@ -1,0 +1,463 @@
+
+/* general styling */
+
+@font-face{
+    font-family: myFont;
+    src: url("/skia/ufonts.com_skia.woff") format("woff");
+}
+
+* {
+    font-family: 'skia', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+:root {
+    --light-purple-color: #DDD6F3;
+    --purple-color: #b6a8e6;
+    --grey-color: #6F6F6F;
+    --gradient: linear-gradient(rgba(75, 8, 109, 0.7),rgba(135, 163, 250,0.7));
+    --dark-purple: #4F1377;
+    --darker-purple: #2D1448;
+    --fun-purple: #A488F2;
+    --yellow-color: #FF9F00;
+}
+
+/* end of general styling */
+
+/* get started & login pages styling */
+
+.row-content-1 {
+    background: var(--gradient), url("/images/img-1.jpg") no-repeat;
+    background-size: cover;
+}
+
+.row-content-2 {
+    background-color: var(--light-purple-color);
+    height: 100vh;
+}
+
+.row-content-3 {
+    height: 100%;
+}
+
+.or-hr {
+    background-color: var(--grey-color);
+}
+
+
+.tagline {
+    color: var(--light-purple-color);
+    font-weight: lighter;
+    font-size: 1.3rem;
+}
+
+.log-in-title {
+    color: var(--grey-color);
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.get-started-title {
+    color: var(--grey-color);
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+.form-rounded {
+    border-radius: 3rem;
+}
+
+.btn-purple {
+    background-color: var(--dark-purple);
+    color: white;
+    border-radius: 3rem;
+}
+
+.btn-purple:hover {
+    background-color: var(--darker-purple);
+    color: var(--light-purple-color);
+}
+
+::placeholder {
+    color: var(--grey-color);
+}
+
+.get-started {
+    color: var(--grey-color);
+    font-weight: lighter;
+}
+
+.get-started a{
+    color: var(--grey-color);
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.or {
+    color: var(--grey-color);
+    font-weight: lighter;
+}
+
+.skip-for-now a {
+    color: var(--fun-purple);
+    text-decoration: underline;
+}
+
+.skip-for-now a:hover {
+    color: var(--dark-purple);
+}
+
+.row-content-5 {
+    height: 100vh;
+}
+
+
+/* end of get started & login pages styling */
+
+/* body animation */
+body {
+    background: linear-gradient(270deg, #4b086d, #87a3fa);
+    background-size: 400% 400%;
+    
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* end of body animation */
+
+/* end of navigation styling */
+
+.navbar {
+    border-radius: 20rem;
+    backdrop-filter: blur(1rem);
+    background-color: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(5px);
+    top: 2rem;
+    width: 85%;
+    left: 80%;
+    transform: translateX(-80%);
+}
+
+.nav-link {
+    color: var(--darker-purple);
+} 
+
+.nav-link:hover {
+    color: var(--dark-purple);
+} 
+
+.nav-link.active { 
+    background-color: var(--dark-purple) !important;
+    border-radius: 3rem !important; 
+}
+
+.btn-unfilled {
+    border-radius: 3rem;
+    border: var(--darker-purple) solid 0.5px;
+    color: var(--darker-purple);
+}
+
+.btn-unfilled:hover {
+    color: white;
+    background-color: var(--darker-purple);
+}
+
+.form-control {
+    border-radius: 3rem;
+    border: none;
+}
+
+.logo {
+    position: absolute;
+    z-index: 20;
+    left: 0.1rem;
+    top: 1.5rem;
+}
+
+/* end of navigation styling */
+
+/* carousel styling */
+
+.media {
+    height: 80vh;
+}
+
+.media img {
+    object-fit: cover;
+}
+
+.media::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--grey-color);
+    opacity: 0.5;
+    width: 100%;
+    height: 90vh;
+}
+
+.slideshow-icons{
+    z-index: 10;
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+}
+
+.hamburger {
+    position: absolute;
+    z-index: 20;
+    font-size: 2.5rem;
+    top: 2rem;
+    right: 1.5rem;
+}
+
+.hamburger span {
+    color: var(--darker-purple);
+}
+
+.slideshow {
+    position: relative;
+}
+
+.close {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+.close span {
+    color: var(--darker-purple);
+    font-size: 2rem;
+}
+
+.menu-inside {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(0.3rem);
+    background-color: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 100;
+    display: none;
+}
+
+.menu-inside a {
+    font-size: 1.5rem;
+}
+
+.menu-hr {
+    background-color: var(--darker-purple);
+    opacity: 0.3;
+}
+
+.icon-text {
+    color: white;
+    font-weight: lighter;
+}
+
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.badge-danger {
+    font-size: 1.1rem;
+    border-radius: 5rem;
+    font-weight: lighter;
+}
+
+/* end of carousel styling */
+
+/* vertical scrolling */
+
+.category {
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.scroll-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-left: 2rem;
+}
+
+.scroll-wrapper > .card {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
+    border: none;
+    position: relative;
+}
+
+.scroll-wrapper > .card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--grey-color);
+    border-radius: 2rem;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+.card img {
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.card-category {
+    display: inline-block;
+    position: relative;
+    border-radius: 2rem;
+    border: none;
+    width: 14rem;
+    height: 19rem;
+    background-color: var(--darker-purple);
+}
+
+.card-category img {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.category-content span {
+    color: var(--light-purple-color);
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+
+.fa {
+    color: white;
+}
+
+
+.title-scroll {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: var(--light-purple-color);
+}
+
+/* end of vertical scrolling */
+
+/* subscriptions styling */
+
+.subscriptions {
+    background-color: var(--dark-purple);
+    height: 50rem;
+}
+
+.badge-yellow {
+    background-color: var(--yellow-color);
+    color: white;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+}
+
+#collapseOne, #collapseTwo, #collapseThree {
+    backdrop-filter: blur(10rem);
+    background-color: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10rem);
+    border-radius: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    transition: 0.5s ease;
+}
+
+/*  end of subscriptions styling  */
+
+/* footer styling */
+
+.footer-container {
+    position: relative;
+}
+
+footer {
+    height: 65vh;
+    width: 100%;
+    background: linear-gradient(rgba(111, 111, 111,0.6),rgba(111, 111, 111,0.6)), url("../images/monsters-footer.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+    color: white;
+    padding: 1.8rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--yellow-color);
+}
+
+
+hr {
+    opacity: 0.5;
+    background-color: white;
+}
+
+.footer-copyright{
+    text-align: center;
+    font-weight: lighter;
+}
+
+.fa {
+    cursor: pointer;
+}
+
+/* end of footer styling */
+
+
+@media only screen and (max-width: 470px){
+    .title {
+        font-size: 2.3rem;
+    }
+}
